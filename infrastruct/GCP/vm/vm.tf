@@ -10,8 +10,12 @@ resource "google_compute_instance" "vm" {
   }
 
   network_interface{
-      subnetwork= var.subnets_name
+      subnetwork= var.subnet_name
+      access_config {
+        
+      }
   }
+
   service_account {
     email  = var.sa_email
     scopes = var.sa_scopes

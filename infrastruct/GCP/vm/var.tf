@@ -6,7 +6,7 @@ variable "vm_zone"{}
 
 variable "vm_image"{}
 
-variable "subnets_name"{}
+variable "subnet_name"{}
 
 variable "sa_email"{}
 
@@ -16,5 +16,5 @@ variable "sa_scopes" {
 
 variable "metadata_startup_script"{
     type = string
-    default = ""
+    default = "echo Welcome"
 }

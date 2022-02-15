@@ -1,6 +1,8 @@
 variable "nat_name" {}
 
-variable "router_name" {}
+variable "region" {}
+
+variable "router_id" {}
 
 variable "ip_allocate" {}
 

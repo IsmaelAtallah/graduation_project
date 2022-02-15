@@ -17,12 +17,12 @@ variable "initial_node_count" {
 
 variable "enable_private_nodes" {
     type = bool
-    default = true
+    default = false
 }
 
 variable "enable_private_endpoint" {
     type = bool
-    default = true
+    default = false
 }
 
 variable "master_ipv4_cidr_block" {}
@@ -47,7 +47,7 @@ variable "node_count" {
 
 variable "node_preemptible" {
   type= bool
-  dedefault = true 
+  default = true 
 }
 
 variable "node_type" {}
