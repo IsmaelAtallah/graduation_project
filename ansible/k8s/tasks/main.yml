@@ -1,0 +1,54 @@
+---
+# tasks file for k8s
+- name: get cluster configerutions 
+  command: gcloud container clusters get-credentials cluster --region europe-north1 --project som3a-iti
+
+- name: install kubernates module
+  pip:
+    name: kubernetes
+    state: latest
+
+- name: copy manifest
+  copy:
+    src: .
+    dest: manifest/.
+
+- name: create namespace
+  k8s:
+    src: manifest/namespace.yaml
+    state: present
+
+- name: deploy jenkins pods
+  k8s:
+    src: manifest/jenkins.yaml
+    state: present
+
+- name: creat lb service
+  k8s:
+    src: manifest/jenkinslb.yaml
+    state: present
+
+- name: Pause for 2 minutes to build loadbalancer 
+  pause:
+    minutes: 2
+
+- name: get lb ip
+  command: kubectl get svc -n jenkins
+  register: service   
+
+- debug: 
+    var: service.stdout
+
+- name: get lb ip
+  command: kubectl get svc -n jenkins
+  register: service   
+
+- debug: 
+    var: service.stdout
+
+- name: get jenkins init password
+  command: kubectl exec jenkins-1 -n jenkins cat /var/jenkins_home/secrets/initialAdminPassword 
+  register: password
+
+- debug:
+    var: password.stdout
