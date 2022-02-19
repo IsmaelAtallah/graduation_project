@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: web
+  template:
+    metadata:
+      labels:
+        type: web
+    spec:
+      containers:
+      - name: web
+        image: som3a97/fromjenkins:v6
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-loadblancer	
+spec:
+  type: LoadBalancer
+  selector:
+    type: web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

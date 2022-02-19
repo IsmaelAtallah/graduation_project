@@ -1,26 +1,24 @@
   apiVersion: apps/v1
-  kind: Deployment
+  kind: StatefulSet
   metadata:
     namespace: jenkins
     labels:
       app: jenkins
     name: jenkins
   spec:
+    serviceName: "app-loadblancer"
     replicas: 1
     selector:
       matchLabels:
         app: jenkins
-    strategy: {}
     template:
       metadata:
-        creationTimestamp: null
         labels:
           app: jenkins
       spec:
         containers:
         - image: jenkins/jenkins:lts-jdk11
           name: jenkins
-          resources: {}
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -32,4 +30,3 @@
             periodSeconds: 10
             successThreshold: 2
             timeoutSeconds: 5
-  status: {}

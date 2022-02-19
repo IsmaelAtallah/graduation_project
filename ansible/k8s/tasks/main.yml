@@ -47,7 +47,7 @@
     var: service.stdout
 
 - name: get jenkins init password
-  command: kubectl exec jenkins-1 -n jenkins cat /var/jenkins_home/secrets/initialAdminPassword 
+  command: kubectl exec jenkins-0 -n jenkins cat /var/jenkins_home/secrets/initialAdminPassword 
   register: password
 
 - debug:
