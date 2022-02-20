@@ -69,9 +69,9 @@ https://user-images.githubusercontent.com/95479305/154840155-77d477f8-d86e-4e6f-
 ```
 * in infrastructure/GCP/value.tfvars Enter your project Id, credentials file path and region 
 
-* in the terminal run:
+* open the terminal in infrastructure/GCP and run:
 ```
-   $ . infrastructure/GCP/run.sh
+   $ . run.sh
 ```
 * get loadbalancer ip and type it in browser like:
 ```

@@ -1,6 +1,0 @@
-- hosts: all
-  remote_user: timon
-  roles:
-    - dependencies
-    - k8s
-        

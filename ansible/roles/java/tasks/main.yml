@@ -1,0 +1,9 @@
+---
+# tasks file for java
+# install jdk 
+
+- name: install jave 11
+  become: true
+  apt:
+    name: default-jdk
+    state: latest
