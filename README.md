@@ -6,7 +6,10 @@ Graduation project is a fully infrastructure on google cloud platform (GCP) wher
 ## Infrastructure 
 
 Using Terraform we create infrastructure modules and used it to built infrastructure that shown blow on GCP 
+
 ![Image](media/infra.png)
+
+
 you can find modules at infrastructure/GCP    
 
 ## Configurations 
