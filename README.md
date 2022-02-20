@@ -1,3 +1,4 @@
+
 #  ITI Graduation Project
 
 Graduation project is a fully infrastructure on google cloud platform (GCP) where we could deploy web app on it using DevOps tools like (ansible - kubernates - Docker - jenkins ).
@@ -48,8 +49,8 @@ create a new pipeline job that listen to  [github project](https://github.com/Is
 you can find jenkins script, K8s manifest and Docker file at app/
 
 ## Project demo     
-  	![video](media/promo.mp4)
-   [![Watch the video](media/promo.mp4)](media/promo.mp4)
+  	https://user-images.githubusercontent.com/95479305/154840155-77d477f8-d86e-4e6f-9c34-73ed12e9d5cf.mp4
+
 ## How to use project 
 * Prerequste 
   1. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
