@@ -2,6 +2,6 @@
   remote_user: timon
   roles:
     - ../roles/dependencies
-    - ../roles/java
     #- ../roles/docker
     - ../roles/k8s
+    - ../roles/java
