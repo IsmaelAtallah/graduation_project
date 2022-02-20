@@ -49,7 +49,7 @@ you can find jenkins script, K8s manifest and Docker file at app/
 
 ## Project demo     
   ![video](media/promo.mp4)
-
+   [![Watch the video]()](media/promo.mp4)
 ## How to use project 
 * Prerequste 
   1. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
